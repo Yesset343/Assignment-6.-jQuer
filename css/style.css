@@ -1,0 +1,631 @@
+/* =========================================================
+   CS2 HUB
+   ASSIGNMENT #4
+   ========================================================= */
+
+/* GENERAL */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #212529;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* NAVBAR */
+.navbar-brand {
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    transition: 0.2s ease;
+}
+
+.nav-link:hover {
+    color: #ffffff !important;
+}
+
+/* HERO */
+.hero-section {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.72)),
+        url("../images/trophy.jpg") center / cover no-repeat;
+    color: white;
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+}
+
+.hero-title {
+    font-size: 4rem;
+}
+
+.hero-text {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* PAGE HEADER */
+.page-header {
+    background-color: #212529;
+    color: white;
+}
+
+/* SECTION TITLES */
+.section-title {
+    font-weight: 700;
+}
+
+/* RESPONSIVE TYPOGRAPHY */
+.responsive-text {
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+/* INFO BOX */
+.info-box {
+    background-color: #f8f9fa;
+    border-left: 5px solid #0d6efd;
+    border-radius: 8px;
+}
+
+/* CUSTOM CARDS */
+.custom-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.custom-card {
+    flex: 1 1 calc(33.333% - 16px);
+    min-width: 0;
+    background-color: white;
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.custom-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.custom-card-image {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.custom-card-content {
+    padding: 20px;
+}
+/* BOOTSTRAP CARDS */
+.card {
+    border-radius: 10px;
+    overflow: visible !important;
+}
+
+.custom-card-content p {
+    line-height: 1.6;
+}
+
+/* BOOTSTRAP CARDS */
+.card {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card-img-top {
+    height: 230px;
+    object-fit: cover;
+}
+
+/* CAROUSEL */
+.carousel-image {
+    height: 500px;
+    object-fit: cover;
+}
+
+/* BUTTONS */
+.btn {
+    transition: 0.2s ease;
+}
+
+/* FORM */
+.form-control,
+.form-select {
+    min-height: 45px;
+}
+
+textarea.form-control {
+    min-height: 130px;
+}
+
+/* GALLERY */
+.gallery-card {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.gallery-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) !important;
+}
+
+.gallery-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+/* FOOTER */
+footer {
+    margin-top: 0;
+}
+
+/* MOBILE: 0 - 575px */
+@media (max-width: 575.98px) {
+    .hero-section {
+        min-height: 360px;
+    }
+
+    .hero-title {
+        font-size: 36px;
+    }
+
+    .hero-text {
+        font-size: 16px;
+    }
+
+    .responsive-text {
+        font-size: 14px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .custom-card {
+        flex: 1 1 100%;
+    }
+
+    .custom-card-image {
+        height: 220px;
+    }
+
+    .carousel-image {
+        height: 280px;
+    }
+
+    .btn-group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .btn-group .btn {
+        border-radius: 6px !important;
+        margin-bottom: 5px;
+    }
+
+    .gallery-image {
+        height: 220px;
+    }
+}
+
+/* TABLET: 576 - 991px */
+@media (min-width: 576px) and (max-width: 991.98px) {
+    .hero-title {
+        font-size: 48px;
+    }
+
+    .hero-text {
+        font-size: 18px;
+    }
+
+    .responsive-text {
+        font-size: 17px;
+    }
+
+    .custom-card {
+        flex: 1 1 calc(50% - 12px);
+    }
+
+    .carousel-image {
+        height: 400px;
+    }
+
+    .gallery-image {
+        height: 240px;
+    }
+}
+
+/* DESKTOP: 992px+ */
+@media (min-width: 992px) {
+    .hero-title {
+        font-size: 64px;
+    }
+
+    .responsive-text {
+        font-size: 20px;
+    }
+
+    .custom-card {
+        flex: 1 1 calc(33.333% - 16px);
+    }
+
+    .carousel-image {
+        height: 500px;
+    }
+
+    .gallery-image {
+        height: 250px;
+    }
+}
+
+/* ACCESSIBILITY */
+button:focus,
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 3px solid rgba(13, 110, 253, 0.4);
+    outline-offset: 2px;
+}
+
+/* REDUCED MOTION */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+    }
+}
+
+/* =========================================================
+   ASSIGNMENT #4 — JAVASCRIPT
+   ========================================================= */
+
+/* Task 2: accordion */
+.accordion-item {
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+.accordion-btn {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    border: 0;
+    background: transparent;
+    font-weight: 600;
+    text-align: left;
+    color: #212529;
+    cursor: pointer;
+}
+
+.accordion-icon {
+    transition: transform 0.3s ease;
+    font-size: 1.2rem;
+}
+
+.accordion-item.is-open .accordion-icon {
+    transform: rotate(45deg);
+}
+
+.accordion-collapse {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.35s ease;
+}
+
+.accordion-item.is-open .accordion-collapse {
+    grid-template-rows: 1fr;
+}
+
+.accordion-content {
+    overflow: hidden;
+}
+
+.accordion-content p {
+    margin: 0;
+    padding: 0 20px 16px;
+    line-height: 1.6;
+}
+
+/* Task 3: popup */
+.popup-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    z-index: 2000;
+}
+
+.popup-overlay.is-open {
+    display: flex;
+}
+
+.popup-box {
+    background-color: #ffffff;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 460px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 28px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    border: 0;
+    background: transparent;
+    font-size: 1.8rem;
+    line-height: 1;
+    cursor: pointer;
+    color: #6c757d;
+}
+
+/* Task 1: validation messages */
+.error-text {
+    color: #dc3545;
+    font-size: 0.9rem;
+    min-height: 1.2em;
+    margin-top: 4px;
+}
+
+.form-control.is-invalid,
+.form-select.is-invalid {
+    border-color: #dc3545;
+}
+
+/* Task 4: color button */
+#colorButton {
+    margin-top: 8px;
+}
+
+/* Task 5: clock block */
+.datetime-box {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+/* =========================================================
+   ASSIGNMENT #5 — ADVANCED STYLES & NIGHT MODE
+   ========================================================= */
+
+/* NIGHT / DARK THEME TOGGLE */
+body.dark-theme {
+    background-color: #121212 !important;
+    color: #e0e0e0 !important;
+}
+
+body.dark-theme .card,
+body.dark-theme .custom-card,
+body.dark-theme .accordion-item,
+body.dark-theme .popup-box,
+body.dark-theme .info-box {
+    background-color: #1e1e1e !important;
+    color: #ffffff !important;
+    border-color: #333333 !important;
+}
+
+body.dark-theme .accordion-btn {
+    color: #ffffff !important;
+}
+
+body.dark-theme .accordion-item {
+    border-color: #333 !important;
+}
+
+/* RATING STARS */
+.star-rating {
+    display: inline-flex;
+    gap: 4px;
+    cursor: pointer;
+    font-size: 1.3rem;
+    color: #ccc;
+    user-select: none;
+}
+
+.star-rating .star {
+    transition: color 0.2s ease, transform 0.15s ease;
+}
+
+.star-rating .star:hover {
+    transform: scale(1.25);
+}
+
+.star-rating .star.active {
+    color: #ffc107;
+}
+
+/* READ MORE EXTRA CONTENT */
+.extra-content {
+    display: none;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px dashed #cccccc;
+    font-size: 0.9rem;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* IMAGE MODAL / DISPLAY IMAGE */
+.gallery-modal-img {
+    max-height: 70vh;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+/* ANIMATIONS ON BUTTON CLICK */
+.btn-animate {
+    transition: transform 0.1s ease;
+}
+
+.btn-animate:active {
+    transform: scale(0.95);
+}
+
+/* THEME TOGGLE BUTTON */
+#themeToggleBtn {
+    border-radius: 20px;
+    padding: 4px 12px;
+    font-size: 0.85rem;
+}
+
+/* =========================================================
+   ASSIGNMENT #6 — JQUERY & UX ENGAGEMENT STYLES
+   ========================================================= */
+
+/* Task 4: Scroll Progress Bar */
+#scrollProgressBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 5px;
+    width: 0%;
+    background: linear-gradient(90deg, #0d6efd, #0dcaf0, #ffc107, #dc3545);
+    z-index: 9999;
+    transition: width 0.1s ease-out;
+    box-shadow: 0 0 10px rgba(13, 110, 253, 0.7);
+}
+
+/* Task 2: Autocomplete Dropdown */
+.search-container {
+    position: relative;
+    z-index: 1000;
+}
+
+.autocomplete-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 0 0 8px 8px;
+    max-height: 220px;
+    overflow-y: auto;
+    z-index: 9999 !important;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    display: none;
+}
+
+body.dark-theme .autocomplete-dropdown {
+    background: #1e1e1e;
+    border-color: #333333;
+}
+
+.autocomplete-item {
+    padding: 10px 16px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.autocomplete-item:hover {
+    background-color: #f8f9fa;
+    color: #0d6efd;
+}
+
+body.dark-theme .autocomplete-item:hover {
+    background-color: #2b2b2b;
+    color: #0dcaf0;
+}
+
+/* Task 3: Search Highlighting */
+mark.search-highlight {
+    background-color: #ffeb3b;
+    color: #000000;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+/* Task 5: Animated Counter Section */
+.stats-card {
+    background: linear-gradient(135deg, #0d6efd, #0b5ed7);
+    color: #ffffff;
+    border-radius: 12px;
+}
+
+.stat-number {
+    font-size: 2.8rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+/* Task 7: Toast Notifications Container */
+#toastContainer {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 1100;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+.custom-toast {
+    min-width: 280px;
+    background: #212529;
+    color: #ffffff;
+    padding: 14px 20px;
+    border-radius: 8px;
+    border-left: 5px solid #0d6efd;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+    display: none;
+    font-weight: 500;
+}
+
+/* Task 8: Copy Button & Server Widget */
+.server-ip-box {
+    background: #f8f9fa;
+    border: 2px dashed #0d6efd;
+    border-radius: 10px;
+    padding: 14px 20px;
+}
+
+body.dark-theme .server-ip-box {
+    background: #1e1e1e;
+    border-color: #0dcaf0;
+}
+
+/* Task 9: Image Lazy Loading Placeholder */
+img.lazy-img {
+    opacity: 0.3;
+    transition: opacity 0.5s ease-in-out;
+    filter: blur(4px);
+}
+
+img.lazy-img.loaded {
+    opacity: 1;
+    filter: blur(0);
+}}
